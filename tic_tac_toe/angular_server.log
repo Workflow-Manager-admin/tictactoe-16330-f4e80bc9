@@ -43,3 +43,110 @@ main.server.mjs     | main.server | 800 bytes |
 
 Application bundle generation complete. [0.341 seconds]
 
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.394 seconds]
+
+✘ [ERROR] NG9: Property 'title' does not exist on type 'AppComponent'. [plugin angular-compiler]
+
+    src/app/app.component.html:228:20:
+      228 │       <h1>Hello, {{ title }}</h1>
+          ╵                     ~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:7:15:
+      7 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8001: 'router-outlet' is not a known element:
+1. If 'router-outlet' is an Angular component, then verify that it is included in the '@Component.imports' of this component.
+2. If 'router-outlet' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@Component.schemas' of this component to suppress this message. [plugin angular-compiler]
+
+    src/app/app.component.html:336:0:
+      336 │ <router-outlet />
+          ╵ ~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:7:15:
+      7 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2322: Type 'number[][]' is not assignable to type '[number, number][]'.
+  Type 'number[]' is not assignable to type '[number, number]'.
+    Target requires 2 element(s) but source may have fewer. [plugin angular-compiler]
+
+    src/app/app.component.ts:89:8:
+      89 │         this.winningLine = line;
+         ╵         ~~~~~~~~~~~~~~~~
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.171 seconds]
+
+▲ [WARNING] NG8103: The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:3:27:
+      3 │   <div class="ttt-status" *ngIf="statusMessage as statMsg">{{ statM...
+        ╵                            ~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:7:15:
+      7 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:5:26:
+      5 │     <div class="ttt-row" *ngFor="let row of grid; let i = index">
+        ╵                           ~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:7:15:
+      7 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+▲ [WARNING] NG8103: The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @for or make sure that either the `NgFor` directive or the `CommonModule` is included in the `@Component.imports` array of this component. [plugin angular-compiler]
+
+    src/app/app.component.html:7:9:
+      7 │         *ngFor="let cell of row; let j = index"
+        ╵          ~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:7:15:
+      7 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] NG8002: Can't bind to 'ngClass' since it isn't a known property of 'button'. [plugin angular-compiler]
+
+    src/app/app.component.html:8:8:
+      8 │         [ngClass]="{ 'ttt-won': isCellInWin(i,j) }"
+        ╵         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  Error occurs in the template of component AppComponent.
+
+    src/app/app.component.ts:7:15:
+      7 │   templateUrl: './app.component.html',
+        ╵                ~~~~~~~~~~~~~~~~~~~~~~
+
+
+✘ [ERROR] TS2322: Type 'number[][]' is not assignable to type '[number, number][]'.
+  Type 'number[]' is not assignable to type '[number, number]'.
+    Target requires 2 element(s) but source may have fewer. [plugin angular-compiler]
+
+    src/app/app.component.ts:89:8:
+      89 │         this.winningLine = line;
+         ╵         ~~~~~~~~~~~~~~~~
+
+
