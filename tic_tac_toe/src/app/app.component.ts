@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 // PUBLIC_INTERFACE
 @Component({
   selector: 'app-root',
   standalone: true,
+  imports: [CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -12,7 +14,7 @@ export class AppComponent {
   grid: ('X' | 'O' | '')[][] = [];
   currentPlayer: 'X' | 'O' = 'X';
   winner: '' | 'X' | 'O' = '';
-  winningLine: [number, number][] = [];
+  winningLine: Array<[number, number]> = [];
   draw: boolean = false;
 
   // PUBLIC_INTERFACE
@@ -69,7 +71,7 @@ export class AppComponent {
 
   // PUBLIC_INTERFACE
   checkWin(): boolean {
-    const lines = [
+    const lines: Array<[[number, number],[number, number],[number, number]]> = [
       // Rows
       [[0,0],[0,1],[0,2]],
       [[1,0],[1,1],[1,2]],
@@ -86,7 +88,7 @@ export class AppComponent {
       const [a, b, c] = line;
       const v = this.grid[a[0]][a[1]];
       if (v && v === this.grid[b[0]][b[1]] && v === this.grid[c[0]][c[1]]) {
-        this.winningLine = line;
+        this.winningLine = [a, b, c];
         return true;
       }
     }
