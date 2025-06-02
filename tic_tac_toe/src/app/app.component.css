@@ -1,0 +1,107 @@
+/* TicTacToe minimalist centered board and UI */
+
+.ttt-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+  color: #000;
+}
+
+.ttt-status {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: #000;
+  letter-spacing: 0.04em;
+}
+
+.ttt-board {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.7rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 18px 0 rgba(33,150,243,0.07);
+  background: #fff;
+}
+
+.ttt-row {
+  display: flex;
+  gap: 0;
+}
+
+.ttt-cell {
+  width: 72px;
+  height: 72px;
+  background: #fff;
+  color: #000;
+  border: 1.5px solid #000;
+  border-right: none;
+  border-bottom: none;
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s;
+  padding: 0;
+  margin: 0;
+}
+
+.ttt-row:first-child .ttt-cell {
+  border-top: 1.5px solid #000;
+}
+.ttt-row .ttt-cell:first-child {
+  border-left: 1.5px solid #000;
+}
+.ttt-row:last-child .ttt-cell {
+  border-bottom: 1.5px solid #000;
+}
+.ttt-cell:last-child {
+  border-right: 1.5px solid #000;
+}
+
+.ttt-cell.ttt-won {
+  background: #2196f3;
+  color: #fff;
+  transition: background 0.25s, color 0.15s;
+}
+
+.ttt-cell:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ttt-reset {
+  margin-top: 0.5rem;
+  background: #2196f3;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.05rem;
+  padding: 0.6em 2.2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px 0 rgba(33,150,243,0.10);
+  cursor: pointer;
+  transition: background 0.13s;
+}
+.ttt-reset:active {
+  background: #1564a1;
+}
+@media (max-width: 600px) {
+  .ttt-cell {
+    width: 48px;
+    height: 48px;
+    font-size: 1.7rem;
+  }
+  .ttt-board {
+    margin-bottom: 1rem;
+  }
+}
